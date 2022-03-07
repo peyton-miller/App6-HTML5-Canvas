@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+create an app that has a button that pops up a rectangle then one that puts my name on it then a button that loads an image and then an image button that clears the canvas.
  
 Known Issues:
-blah, blah, blah, blah
+Adding the image was a big issue for me. 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -75,7 +75,26 @@ function draw_b() {// function for the rectangle
 }
 	</script>
 	
+<script>
+function draw_text(){// function-creates name
+	var c = document.getElementById("myCanvas");//brings the canvas
+	var ctx = c.getContext("2d");//makes name 2d
+	ctx.font = "18px Arial";//font size
+	ctx.fillText("Peyton Miller", 60, 150);//cordinates for name 
+	}
+	</script>
 	
+<script>
+function insert_image(){//function that inserts image
+	var a_canvas = document.getElementById("myCanvas");// brings the canvas
+	var a_context = a_canvas.getContext("2d");//makes image 2d
+	var img = new Image();//variable for image = new image
+	img.src = "https://www.bing.com/images/search?view=detailV2&ccid=%2f%2bxD5SDv&id=5146E1BFD6BB8A3C2496A186A46B0C9FA0F686F8&thid=OIP._-xD5SDv1ZPaZLbEQ-8_-AHaI1&mediaurl=https%3a%2f%2fpngimg.com%2fuploads%2fsnoopy%2fsnoopy_PNG61.png&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.ffec43e520efd593da64b6c443ef3ff8%3frik%3d%252bIb2oJ8Ma6SGoQ%26pid%3dImgRaw%26r%3d0&exph=1000&expw=838&q=snoopy&simid=608013098407825637&FORM=IRPRST&ck=1B8BD58968B1C47896FA493FD78B7725&selectedIndex=10"; //adds image in src
+	img.onload = function() {//function for image
+		a_context.drawImage(img, 200,5,60,60);//cordinates for 
+		};
+	}
+</script>	
 	
 	
 <body>
@@ -89,6 +108,17 @@ function draw_b() {// function for the rectangle
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<canvas id="myCanvas" width="300" height="225" style="border:1px solid #000000;"> </canvas>
+	</div> <!--creates black border-->
+	<a onclick="draw_b();" class="w3-btn w3-black">Draw Rectangle </a>
+						     </div><!--button for rectangle -->
+	<a onclick="draw_text();" class="w3-btn w3-black">Write Name</a>
+	                                             </div><!--button for the name -->
+        <a onclick="insert_image();" class="w3-btn w3-black">Insert Image</a>
+	</div><!--button for the image -->
+        <a onclick="clear_canvas();" class="w3-btn w3-black">Clear Canvas</a>
+        </div><!--button for clearing the canvas -->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
