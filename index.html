@@ -73,7 +73,7 @@ function draw_b() {// function for the rectangle
 	var a_context = a_canvas.getContext("2d");//makes rectangle 2d)
 	a_context.fillRect(50, 25, 150, 100); //coordinates for the rectangle 
 }
-	</script>
+</script>
 	
 <script>
 function draw_text(){// function-creates name
@@ -81,20 +81,20 @@ function draw_text(){// function-creates name
 	var ctx = c.getContext("2d");//makes name 2d
 	ctx.font = "18px Arial";//font size
 	ctx.fillText("Peyton Miller", 60, 150);//cordinates for name 
-	}
-	</script>
+}
+</script>
 	
 <script>
 function insert_image(){//function that inserts image
 	var a_canvas = document.getElementById("myCanvas");// brings the canvas
 	var a_context = a_canvas.getContext("2d");//makes image 2d
 	var img = new Image();//variable for image = new image
-	img.src = href = "https://www.bing.com/images/search?view=detailV2&ccid=%2f%2bxD5SDv&id=5146E1BFD6BB8A3C2496A186A46B0C9FA0F686F8&thid=OIP._-xD5SDv1ZPaZLbEQ-8_-AHaI1&mediaurl=https%3a%2f%2fpngimg.com%2fuploads%2fsnoopy%2fsnoopy_PNG61.png&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.ffec43e520efd593da64b6c443ef3ff8%3frik%3d%252bIb2oJ8Ma6SGoQ%26pid%3dImgRaw%26r%3d0&exph=1000&expw=838&q=snoopy&simid=608013098407825637&FORM=IRPRST&ck=1B8BD58968B1C47896FA493FD78B7725&selectedIndex=10">; //adds image in src
+	img.src = href = "IMG 6021-preview.HEIC"; //creates the source for the image
 	img.onload = function() {//function for image
 		a_context.drawImage(img, 200,5,60,60);//cordinates for 
 		};
-	}
-</script>	
+}
+       </script>	
 	
 	
 <body>
