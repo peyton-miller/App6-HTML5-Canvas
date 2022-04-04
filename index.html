@@ -69,7 +69,7 @@ var a_canvas = document.getElementById("myCanvas"); //creates mycanvas variable
 
 <script>
 function draw_b() {// function for the rectangle
-	var a_canvas = document.getElementById("mycanvas"); //brings the canvas
+	var a_canvas = document.getElementById("myCanvas"); //brings the canvas
 	var a_context = a_canvas.getContext("2d");//makes rectangle 2d)
 	a_context.fillRect(50, 25, 150, 100); //coordinates for the rectangle 
 }
@@ -89,13 +89,19 @@ function insert_image(){//function that inserts image
 	var a_canvas = document.getElementById("myCanvas");// brings the canvas
 	var a_context = a_canvas.getContext("2d");//makes image 2d
 	var img = new Image();//variable for image = new image
-	img.src = href = "IMG 6021-preview.HEIC"; //creates the source for the image
+	img.src = "https://yt3.ggpht.com/a/AATXAJyuuHbtZ8WHXxnRdXONeJsjhqH1p8hzEx_b3Q=s900-c-k-c0xffffffff-no-rj-mo"; //creates the source for the image
 	img.onload = function() {//function for image
 		a_context.drawImage(img, 200,5,60,60);//cordinates for 
 		};
 }
        </script>	
 	
+<script>
+function clear_canvas(){//function that clears the canvas
+	var a_canvas = document.getElementById("myCanvas");//brings the canvas
+	a_canvas.width = a_canvas.width;//clears canvas 
+}
+	</script>
 	
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
